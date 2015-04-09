@@ -36,8 +36,8 @@
 	 			console.log("Rendiering the content", data);
 	 			//Create elements for the level select view based on the data object returned
 	 			var i, levels = data, length = Object.keys(data[Object.keys(data)]).length, holder = new CreateNode(), hld, selectBtn = new CreateNode(), sb, selector = new CreateNode(), slctr, frag = document.createDocumentFragment();
-	 			
-	 			console.log("VALUE OF FIRST CHILD", Object.keys(data[Object.keys(data)]).length);
+	 			var jsonData = data;
+	 			console.log("VALUE OF FIRST CHILD", Object.keys(data[Object.keys(data)]).length, jsonData.puzzle["level"+"2"]);
 	 			hld = holder.makeElement("DIV", "id", "level-select");
 	 			slctr = selector.makeElement("SPAN", "id", "selector", "1", true);
 	 			
@@ -57,4 +57,4 @@
 	 	
 	 	return LevelSelect;
 	 });
-})();
+}());
