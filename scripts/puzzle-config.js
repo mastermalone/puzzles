@@ -14,6 +14,10 @@ require.config({
         "LevelSelectView": "../../game-modules/scripts/views/LevelSelectView",
         "LevelSelectController": "../../game-modules/scripts/controllers/LevelSelectController",
         "LevelSelectModel": "../../game-modules/scripts/models/LevelSelectModel",
+        "ModalController": "../../game-modules/scripts/controllers/ModalController",
+        "ModalModel": "../../game-modules/scripts/models/ModalModel",
+        "ModalView": "../../game-modules/scripts/views/ModalView",
+        "ModalViewModule": "modules/ModalViewModule",
         "Subclass": "../../game-modules/scripts/modules/Subclass"
     }
 });

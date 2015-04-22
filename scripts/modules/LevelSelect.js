@@ -26,18 +26,18 @@
 	 		animateLevels: function (Bool) {
 	 			this.animate = Bool;
 	 			if(!this.animate){
-	 				console.log("You did not set this to true");
+	 				//console.log("You did not set this to true");
 	 				return;
 	 			}
 	 			console.log("Got passed the check for bool", this.animate);
 	 		},
 	 		render: function (data) {
-	 		    console.log("RENDER CONTENT");
-	 			console.log("Rendiering the content", data);
+	 		    //console.log("RENDER CONTENT");
+	 			//console.log("Rendiering the content", data);
 	 			//Create elements for the level select view based on the data object returned
-	 			var i, levels = data, length = Object.keys(data[Object.keys(data)]).length, holder = new CreateNode(), hld, selectBtn = new CreateNode(), sb, selector = new CreateNode(), slctr, frag = document.createDocumentFragment();
-	 			var jsonData = data;
-	 			console.log("VALUE OF FIRST CHILD", Object.keys(data[Object.keys(data)]).length, jsonData.puzzle["level"+"2"]);
+	 			var jsonData = data, i, levels = data, length =  Object.keys(jsonData.puzzle).length/*Object.keys(data[Object.keys(data)]).length*/, holder = new CreateNode(), hld, selectBtn = new CreateNode(), sb, selector = new CreateNode(), slctr, frag = document.createDocumentFragment();
+	 			
+	 			console.log("VALUE OF FIRST CHILD", /*Object.keys(data[Object.keys(data)]).length,*/ jsonData.puzzle["level"+"2"].image, /*Object.keys(data[Object.keys(data)]),*/ Object.keys(jsonData.puzzle).length, jsonData.modal);
 	 			hld = holder.makeElement("DIV", "id", "level-select");
 	 			slctr = selector.makeElement("SPAN", "id", "selector", "1", true);
 	 			

@@ -100,13 +100,13 @@ footer{
 	font-size:40px;
 	color:#fff;
 	overflow:hidden;
-	float:right;
-	width:185px;
+	/*float:right;
+	width:185px;*/
 }
 #level-select div{
 	display:inline-block;
 	float:left;
-	margin-right:20px;
+	margin:0px 10px 0px 10px;
 	cursor:pointer;
 }
 #level-select > span {
@@ -120,7 +120,7 @@ footer{
 }
 #level-select div, #level-select > span >span{
 	display:inline-block;
-	display:none;
+	/*display:none;*/
 	padding:3px 15px;
 	background: #ffffff;
 	color:#f49f0b;
