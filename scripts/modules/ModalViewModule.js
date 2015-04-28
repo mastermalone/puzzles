@@ -17,17 +17,28 @@
                 targetElm.appendChild(content);
             },
             render: function (data) {
-                console.log("Getting into Modal View Module Render");
                 
                 var jsonData = data, 
                 i, 
-                length = Object.keys(jasonData.modal).length, 
-                holder = new CreateNode(),
-                hld;
+                length = Object.keys(jsonData.modal).length, 
+                modalBg = new CreateNode(),
+                mbg,
+                modalCont = new CreateNode(),
+                mc,
+                frag;
                 
-                hld = holder.makeElement("DIV", "id", "lvs-modal");
-                hld.className = "modal";
+                mbg = modalBg.makeElement("DIV", "id", "lvs-modalBG");
+                mbg.className = "modal";
+                
+                for (i = 0; i < length; i++) {
+                    
+                }
+                console.log("Getting into Modal View Module Render", jsonData.modal);
+                
+                this.placeContent("main", mbg);
             }
         };
+        
+        return ModalViewModule;
     });
 }());
