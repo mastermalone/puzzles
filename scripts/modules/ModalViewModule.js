@@ -9,11 +9,14 @@
                 };
             },
             placeContent: function (el, content) {
-                if (!el || el === "") {
-                    console.log("ModelViewModule Error: Please be sure to include the ID of the target element as an argument");
+                var cont = document.getElementById(content.id),
+                targetElm = document.getElementById(el);
+                
+                if (!el || el === "" || cont !== null) {
+                    console.log("ModelViewModule Error: Please be sure to include the ID of the target element as an argument", targetElm);
                     return;
                 }
-                var targetElm = document.getElementById(el);
+                
                 targetElm.appendChild(content);
             },
             render: function (data) {
