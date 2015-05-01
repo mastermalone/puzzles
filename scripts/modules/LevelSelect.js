@@ -5,7 +5,7 @@
 	 	function LevelSelect () {
 	 		//Empty Constructor
 	 	}
-	 	
+	 	 
 	 	LevelSelect.prototype = {
 	 		constructor: LevelSelect,
 	 		setURL: function (url) {

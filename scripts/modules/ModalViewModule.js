@@ -25,16 +25,24 @@
                 i, 
                 length = Object.keys(jsonData.modal).length, 
                 modalBg = new CreateNode(),
-                mbg,
                 modalCont = new CreateNode(),
+                h2 = new CreateNode(),
+                mbg,                
                 mc,
+                h2,
+                preview, //Make the content be a dependency
                 frag;
                 
                 mbg = modalBg.makeElement("DIV", "id", "lvs-modalBG");
                 mbg.className = "modal";
+                mc = modalCont.makeElement("DIV", "id", "modal-main");
+                mbg.className = "main-cont";
+                
+                
+                mbg.appendChild(mc);
                 
                 for (i = 0; i < length; i++) {
-                    
+                    console.log("VALUE of i", i, "Modal stuff:", jsonData.modal["header"], jsonData.puzzle["level"+(i+1)].image);
                 }
                 console.log("Getting into Modal View Module Render", jsonData.modal);
                 
