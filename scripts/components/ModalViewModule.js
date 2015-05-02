@@ -1,5 +1,5 @@
 (function () {
-    define(["CreateNode"], function (CreateNode) {
+    define(["CreateNode", "DOMElement"], function (CreateNode, DOMElement) {
         "use strict";
         
         var  ModalViewModule = {
@@ -19,6 +19,12 @@
                 
                 targetElm.appendChild(content);
             },
+            makeContent: function (contentObject) {
+                var pageElm, elm;
+                for (var key in contentObject) {
+                    console.log("VALUE OF KEY", key);
+                }
+            },
             render: function (data) {
                 
                 var jsonData = data, 
@@ -26,6 +32,18 @@
                 length = Object.keys(jsonData.modal).length, 
                 modalBg = new CreateNode(),
                 modalCont = new CreateNode(),
+                /*test = new DOMElement(
+                    ["DIV", "DIV"], 
+                    ["id", "data-id"], 
+                    ["test1", "test2"]
+                ),*/
+               
+               test = new DOMElement({
+                   type: ["DIV", "DIV", "UL"],
+                   id: ["lvs-modalBG", "modal-main", "cont-list"],
+                   attrbutes: ["data-modal", "data-main", ""]
+               }),
+                
                 h2 = new CreateNode(),
                 mbg,                
                 mc,
@@ -36,17 +54,25 @@
                 mbg = modalBg.makeElement("DIV", "id", "lvs-modalBG");
                 mbg.className = "modal";
                 mc = modalCont.makeElement("DIV", "id", "modal-main");
+                test.makeElement("DIV", "id", "test-main");
                 mbg.className = "main-cont";
                 
                 
                 mbg.appendChild(mc);
                 
+                /*this.makeContent({
+                    type: ["DIV", "DIV"],
+                    id: ["lvs-modalBg", "modal-main"],
+                    className: ["modal", "main-cont"]
+                });*/
+                
                 for (i = 0; i < length; i++) {
-                    console.log("VALUE of i", i, "Modal stuff:", jsonData.modal["header"], jsonData.puzzle["level"+(i+1)].image);
+                    //console.log("VALUE of i", i, "Modal stuff:", jsonData.modal["header"], jsonData.puzzle["level"+(i+1)].image);
                 }
-                console.log("Getting into Modal View Module Render", jsonData.modal);
+                //console.log("Getting into Modal View Module Render", jsonData.modal);
                 
                 this.placeContent("main", mbg);
+                //this.placeContent("main", test);
             }
         };
         

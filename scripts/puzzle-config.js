@@ -9,16 +9,17 @@ require.config({
         "BaseView": "../../game-modules/scripts/views/BaseView",
         "CreateNode": "../../game-modules/scripts/modules/CreateNode",
         "Dispatch": "../../game-modules/scripts/modules/Dispatch",
+        "DOMElement": "../../game-modules/scripts/modules/DOMElement",
         "Events": "../../game-modules/scripts/modules/Events",
         "jquery": "../../game-modules/scripts/lib/jquery.min",
-        "LevelSelect": "modules/LevelSelect",
+        "LevelSelect": "components/LevelSelect",
         "LevelSelectView": "../../game-modules/scripts/views/LevelSelectView",
         "LevelSelectController": "../../game-modules/scripts/controllers/LevelSelectController",
         "LevelSelectModel": "../../game-modules/scripts/models/LevelSelectModel",
         "ModalController": "../../game-modules/scripts/controllers/ModalController",
         "ModalModel": "../../game-modules/scripts/models/ModalModel",
         "ModalView": "../../game-modules/scripts/views/ModalView",
-        "ModalViewModule": "modules/ModalViewModule",
+        "ModalViewModule": "components/ModalViewModule",
         "Subclass": "../../game-modules/scripts/modules/Subclass"
     }
 });
