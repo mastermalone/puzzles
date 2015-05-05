@@ -38,11 +38,15 @@
                     ["test1", "test2"]
                 ),*/
                
-               test = new DOMElement({
-                   type: ["DIV", "DIV", "UL"],
-                   id: ["lvs-modalBG", "modal-main", "cont-list"],
-                   attrbutes: ["data-modal", "data-main", ""]
-               }),
+                test = new DOMElement({
+                    type: ["DIV", "DIV", "UL"],
+                    id: ["lvs-modalBG", "modal-main", "cont-list"],
+                    dataAttr: ["data-modal", "data-main", "data-list"],
+                    className: ["modal", "main-cont", "modal-list"],
+                    makeHeiarachy: true
+                }),
+                
+                test2 = new DOMElement("DIV", "id", "test2"),
                 
                 h2 = new CreateNode(),
                 mbg,                
@@ -54,7 +58,8 @@
                 mbg = modalBg.makeElement("DIV", "id", "lvs-modalBG");
                 mbg.className = "modal";
                 mc = modalCont.makeElement("DIV", "id", "modal-main");
-                test.makeElement("DIV", "id", "test-main");
+                //test.makeElement("DIV", "id", "test-main");
+                //test.makeElement();
                 mbg.className = "main-cont";
                 
                 
@@ -71,7 +76,7 @@
                 }
                 //console.log("Getting into Modal View Module Render", jsonData.modal);
                 
-                this.placeContent("main", mbg);
+                //this.placeContent("main", mbg);
                 //this.placeContent("main", test);
             }
         };
