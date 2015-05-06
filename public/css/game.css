@@ -44,8 +44,8 @@ footer{
 	margin:0px auto;
 	width:600px;
 }
-#modal-bg{
-	display:none;
+#lvs-modalBG{
+	/*display:none;*/
 	opacity:1;
 	position:absolute;
 	top:0px;
@@ -58,24 +58,29 @@ footer{
 	-webkit-animation: opacity 1s ease-in;
 	-ms-transition: opacity 1s ease-in;
 	-o-transition: opacity 1s ease-in;
-	border-radius: 10px;
+	/*border-radius: 10px;*/
 	-webkit-border-radius: 10px;
 	-o-border-radius: 10px;
 }
-#modal-bg #error{
+#lvs-modalBG #modal-main{
 	margin:30px auto;
 	width:600px;
 	height:200px;
 	padding:20px;
 	background:#ffffff;
-	border-radius:10px;
+	border-radius:40px;
+	border:solid 10px #F2C00C;
 	-webkit-border-radius:10px;
 	-o-border-radius:10px;
 	box-shadow: 0px 5px 10px #000000;
 	-webkit-box-shadow: 0px 5px 10px #000000;
 	-o-box-shadow: 0px 5px 10px #000000;
+	background-color: #f49f0b;
+	background-image: linear-gradient(transparent 50%, rgba(249, 137, 0, .5) 30%);
+	/*background-image: linear-gradient(transparent 50%, rgba(249, 137, 0, .5) 30%) repeat scroll 0 0 #f49f0b;*/
+	background-size: 50px 5px;
 }
-.fade-in, #modal-bg.fade-in{
+.fade-in, #lvs-modalBG.fade-in{
 	opacity:1;
 	transition: opacity 1s;
 	-moz-transition: opacity 1s;
@@ -83,7 +88,7 @@ footer{
 	-ms-transition: opacity 1s;
 	-o-transition: opacity 1s;
 }
-.fade-out, #modal-bg.fade-out{
+.fade-out, #lvs-modalBG.fade-out{
 	opacity:0;
 	transition: opacity 1s;
 	-moz-transition: opacity 1s;
