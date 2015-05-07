@@ -9,6 +9,7 @@ require.config({
         "BaseView": "../../game-modules/scripts/views/BaseView",
         "CreateNode": "../../game-modules/scripts/modules/CreateNode",
         "Dispatch": "../../game-modules/scripts/modules/Dispatch",
+        "domReady": "../../game-modules/scripts/lib/domReady",
         "DOMElement": "../../game-modules/scripts/modules/DOMElement",
         "Events": "../../game-modules/scripts/modules/Events",
         "jquery": "../../game-modules/scripts/lib/jquery.min",
@@ -24,9 +25,13 @@ require.config({
     }
 });
 
-require(["LevelSelect", "App"], function (LevelSelect, App) {
+require(["LevelSelect", "App", "domReady"], function (LevelSelect, App, domReady) {
     var lvs = new LevelSelect(), api;
     api = lvs.setURL('../../game-modules/json/game.json');//Temporary JSON
-    App.init(api.url);
     console.log("THE API Url", api.url);
+    
+    domReady(function () {
+        App.init(api.url);
+    });
+    
 });
