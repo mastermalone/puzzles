@@ -49,26 +49,16 @@ footer{
 	width:600px;
 }
 #lvs-modalBG{
-	/*display:none;*/
-	opacity:1;
 	position:absolute;
 	top:0px;
 	left:0px;
 	right:0px;
 	bottom:0px;
 	background: rgba(255,255,255, .5);
-	transition: opacity 1s ease-in;
-	-moz-transition: opacity 1s ease-in;
-	-webkit-animation: opacity 1s ease-in;
-	-ms-transition: opacity 1s ease-in;
-	-o-transition: opacity 1s ease-in;
-	/*border-radius: 10px;*/
-	-webkit-border-radius: 10px;
-	-o-border-radius: 10px;
 }
 #lvs-modalBG #modal-main{
 	margin:30px auto;
-	width:600px;
+	width:63%;
 	/*height:200px;*/
 	position:relative;
 	padding:20px;
@@ -94,36 +84,59 @@ footer{
 	font-weight:bold;
 }
 #lvs-modalBG #modal-main h3{
-	font-size:20px;
+	font-size:30px;
 }
 #lvs-modalBG #modal-main #modal-preview {
 	margin: 0px auto 10px;
 	padding:0px;
 	background:#ffffff;
-	width:70%;
-	height: 200px;
+	height: 300px;
 	clear:both;
 }
 #lvs-modalBG #modal-main ul {
-	width: 70%;
 	margin:0px auto;
 	padding:10px;
 	list-style: none;
 	overflow: hidden;
 }
+#lvs-modalBG #modal-main #modal-preview, #lvs-modalBG #modal-main ul{
+	width: 80%;
+}
 #lvs-modalBG #modal-main ul li{
 	display:inline-block;
 	float:left;
-	border:solid 5px #f2d037;
-	border-radius:30px;
+	/*border:solid 5px #f2d037;*/
+	border-radius:50px;
 	box-shadow: 0px 3px 5px #666666;
 	-webkit-box-shadow: 0px 3px 5px #666666;
-	padding:10px 20px;
-	font-size:30px;
+	padding:25px 20px;
+	font-size:38px;
 	font-weight:bold;
+	color: #1E5799;
 	text-align:center;
-	width:25%;
+	width:38%;
 	cursor:pointer;
+	border-color: #8fe4fc;
+	background: #ffffff; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #e1e1e1 40%, #fefcea 98%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(40%,#e1e1e1), color-stop(98%,#fefcea)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #e1e1e1 40%,#fefcea 98%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #e1e1e1 40%,#fefcea 98%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #e1e1e1 40%,#fefcea 98%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #e1e1e1 40%,#fefcea 98%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1e1e1', endColorstr='#fefcea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+	background: #f7f7f7; /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  #f7f7f7 62%, #ffffff 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(62%,#f7f7f7), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  #f7f7f7 62%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  #f7f7f7 62%,#ffffff 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  #f7f7f7 62%,#ffffff 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  #f7f7f7 62%,#ffffff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+#lvs-modalBG #modal-main ul li#confirm{
 	background: #f2d037; /* Old browsers */
 	background: -moz-radial-gradient(center, ellipse cover,  #f2d037 40%, #fefcea 98%); /* FF3.6+ */
 	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(40%,#f2d037), color-stop(98%,#fefcea)); /* Chrome,Safari4+ */
@@ -132,17 +145,6 @@ footer{
 	background: -ms-radial-gradient(center, ellipse cover,  #f2d037 40%,#fefcea 98%); /* IE10+ */
 	background: radial-gradient(ellipse at center,  #f2d037 40%,#fefcea 98%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2d037', endColorstr='#fefcea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-#lvs-modalBG #modal-main ul li#confirm{
-	border-color: #8fe4fc;
-	background: #8fe4fc; /* Old browsers */
-	background: -moz-radial-gradient(center, ellipse cover,  #8fe4fc 40%, #fefcea 98%); /* FF3.6+ */
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(40%,#8fe4fc), color-stop(98%,#fefcea)); /* Chrome,Safari4+ */
-	background: -webkit-radial-gradient(center, ellipse cover,  #8fe4fc 40%,#fefcea 98%); /* Chrome10+,Safari5.1+ */
-	background: -o-radial-gradient(center, ellipse cover,  #8fe4fc 40%,#fefcea 98%); /* Opera 12+ */
-	background: -ms-radial-gradient(center, ellipse cover,  #8fe4fc 40%,#fefcea 98%); /* IE10+ */
-	background: radial-gradient(ellipse at center,  #8fe4fc 40%,#fefcea 98%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8fe4fc', endColorstr='#fefcea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 #lvs-modalBG #modal-main ul li:last-child{
 	float:right;
@@ -150,37 +152,32 @@ footer{
 #lvs-modalBG #modal-main span{
 	display:inline-block;
 	position: absolute;
-	top:15px;
-	right:195px;
-	border:solid 2px #E05E02;
-	border-radius:30px;
+	top:20px;
+	right:37%;
+	
 	font-size:40px;
 	font-weight:bold;
-	padding:3px 15px;
-	background: #f2d037; /* Old browsers */
-	background: -moz-radial-gradient(center, ellipse cover,  #f2d037 40%, #fefcea 98%); /* FF3.6+ */
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(40%,#f2d037), color-stop(98%,#fefcea)); /* Chrome,Safari4+ */
-	background: -webkit-radial-gradient(center, ellipse cover,  #f2d037 40%,#fefcea 98%); /* Chrome10+,Safari5.1+ */
-	background: -o-radial-gradient(center, ellipse cover,  #f2d037 40%,#fefcea 98%); /* Opera 12+ */
-	background: -ms-radial-gradient(center, ellipse cover,  #f2d037 40%,#fefcea 98%); /* IE10+ */
-	background: radial-gradient(ellipse at center,  #f2d037 40%,#fefcea 98%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2d037', endColorstr='#fefcea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	color: #ffffff;
 }
-.fade-in, #lvs-modalBG.fade-in{
-	opacity:1;
-	transition: opacity 1s;
-	-moz-transition: opacity 1s;
-	-webkit-animation: opacity 1s;
-	-ms-transition: opacity 1s;
-	-o-transition: opacity 1s;
+#lvs-modalBG #modal-main span.lvl-ind.tens{
+	padding: 3px 5px;
 }
-.fade-out, #lvs-modalBG.fade-out{
+.fade-in{
+	opacity:1 !important;
+	transition: opacity .5s;
+	-moz-transition: opacity .5s;
+	-webkit-animation: opacity .5s;
+	-ms-transition: opacity .5s;
+	-o-transition: opacity .5s;
+	
+}
+.fade-out{
 	opacity:0;
-	transition: opacity 1s;
-	-moz-transition: opacity 1s;
-	-webkit-animation: opacity 1s;
-	-ms-transition: opacity 1s;
-	-o-transition: opacity 1s;
+	transition: opacity .5s;
+	-moz-transition: opacity .5s;
+	-webkit-animation: opacity .5s;
+	-ms-transition: opacity .5s;
+	-o-transition: opacity .5s;
 }
 
 /**********Level Select Module********/

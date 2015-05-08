@@ -8,6 +8,7 @@ require.config({
         "BaseModel": "../../game-modules/scripts/models/BaseModel",
         "BaseView": "../../game-modules/scripts/views/BaseView",
         "CreateNode": "../../game-modules/scripts/modules/CreateNode",
+        "CssTransitions": "../../game-modules/scripts/modules/CssTransitionEvents",
         "Dispatch": "../../game-modules/scripts/modules/Dispatch",
         "domReady": "../../game-modules/scripts/lib/domReady",
         "DOMElement": "../../game-modules/scripts/modules/DOMElement",
