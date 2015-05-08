@@ -19,7 +19,7 @@
                 lvlInd; 
                 
                 /*DOMElement allows for easy creation of different types of dynamic elements 
-                 * In the code below, I create the modal overlal and all of it's nested child nodes
+                 * In the code below, I create the modal overlay and all of it's nested child nodes
                  */               
                 modal = new DOMElement({
                     type: ["DIV", "DIV"],

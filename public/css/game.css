@@ -161,6 +161,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', end
 }
 #lvs-modalBG #modal-main span.lvl-ind.tens{
 	padding: 3px 5px;
+	top:17px;
+	right:33%;
 }
 .fade-in{
 	opacity:1 !important;
