@@ -22,14 +22,18 @@ require.config({
         "ModalModel": "../../game-modules/scripts/models/ModalModel",
         "ModalView": "../../game-modules/scripts/views/ModalView",
         "ModalViewModule": "components/ModalViewModule",
-        "Subclass": "../../game-modules/scripts/modules/Subclass"
+        "Subclass": "../../game-modules/scripts/modules/Subclass",
+        "TrayController": "../../game-modules/scripts/controllers/TrayController",     
+        "TrayModel": "../../game-modules/scripts/models/TrayModel",
+        "TrayModule": "components/TrayModule",
+        "TrayView": "../../game-modules/scripts/views/TrayView"
     }
 });
 
-require(["LevelSelect", "App", "domReady"], function (LevelSelect, App, domReady) {
-    var lvs = new LevelSelect(), api;
-    api = lvs.setURL('../../game-modules/json/game.json');//Temporary JSON
-    console.log("THE API Url", api.url);
+require(["App", "domReady"], function (App, domReady) {
+    var api = App.setAPIURL('../../game-modules/json/game.json');//Temporary JSON;
+    
+    console.log("THE API URL", api.url);
     
     domReady(function () {
         App.init(api.url);
