@@ -4,11 +4,6 @@
         var dsp = new Dispatch(), 
         modal,
         ModalViewModule = {
-            setUrl: function (url) {
-                return {
-                    url: url
-                };
-            },
             render: function (data, lvl) {
                 var jsonData = data, 
                 i, 
