@@ -26,7 +26,8 @@ require.config({
         "TrayController": "../../game-modules/scripts/controllers/TrayController",     
         "TrayModel": "../../game-modules/scripts/models/TrayModel",
         "TrayModule": "components/TrayModule",
-        "TrayView": "../../game-modules/scripts/views/TrayView"
+        "TrayView": "../../game-modules/scripts/views/TrayView",
+        "Tween": "../../game-modules/scripts/lib/tweenjs/tweenjs-0.6.0.min"
     }
 });
 

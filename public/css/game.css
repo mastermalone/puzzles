@@ -231,7 +231,7 @@ footer{
     user-select: none;
 }
 #level-select > span >span{
-	margin:0px 20px 0px 10px;
+	margin:0px 15px 0px 5px;
 	display:inline-block;
 }
 #level-select div#select-btn10{
@@ -256,6 +256,7 @@ footer{
 	margin-bottom: 20px;
 }
 #tray #level-indicator{
+	cursor:pointer;
 	display: inline-block;
 	position:absolute;
 	top:20px;
