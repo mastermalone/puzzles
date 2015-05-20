@@ -1,15 +1,6 @@
 require.config({
     urlArgs: "bust=" +  (new Date()).getTime(),//Remove before deployment
     baseUrl:"scripts/",
-    shim: {
-        easel: {
-            exports: "createjs"
-        },
-        tween: {
-            deps: ["easel"],
-            exports: "Tween"
-        }
-    },
     paths: {
         "App": "../../game-modules/scripts/app",
         "Ajax": "../../game-modules/scripts/modules/Ajax",
@@ -21,7 +12,7 @@ require.config({
         "Dispatch": "../../game-modules/scripts/modules/Dispatch",
         "domReady": "../../game-modules/scripts/lib/domReady",
         "DOMElement": "../../game-modules/scripts/modules/DOMElement",
-        "easel": "../../game-modules/scripts/lib/easeljs/easeljs.0.8.0.min",
+        "Easel": "../../game-modules/scripts/lib/easeljs/easeljs-0.8.0.min",
         "Events": "../../game-modules/scripts/modules/Events",
         "jquery": "../../game-modules/scripts/lib/jquery.min",
         "LevelSelect": "components/LevelSelect",
@@ -39,13 +30,24 @@ require.config({
         "TrayView": "../../game-modules/scripts/views/TrayView",
         "Tween": "../../game-modules/scripts/lib/tweenjs/tweenjs-0.6.0.min"
     },
+    shim: {
+        "Easel": {
+            exports: "Easel"
+        },
+        "tween": {
+            deps: ["Easel"],
+            exports: "Tween"
+        }
+    }
     
 });
 
-require(["App", "domReady"], function (App, domReady) {
-    var api = App.setAPIURL('../../game-modules/json/game.json');//Temporary JSON;
+require(["App", "domReady", "Tween", "Easel"], function (App, domReady, Tween, Easel) {
+    var api = App.setAPIURL('../../game-modules/json/game.json');//Temporary JSON work;
+    //var api = App.setAPIURL('../game-modules/json/game.json');//Temporary JSON home;
     
     console.log("THE API URL", api.url);
+    console.log("EASEL", Easel);
     
     domReady(function () {
         App.init(api.url);
