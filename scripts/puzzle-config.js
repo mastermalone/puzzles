@@ -1,6 +1,15 @@
 require.config({
     urlArgs: "bust=" +  (new Date()).getTime(),//Remove before deployment
     baseUrl:"scripts/",
+    shim: {
+        easel: {
+            exports: "createjs"
+        },
+        tween: {
+            deps: ["easel"],
+            exports: "Tween"
+        }
+    },
     paths: {
         "App": "../../game-modules/scripts/app",
         "Ajax": "../../game-modules/scripts/modules/Ajax",
@@ -12,6 +21,7 @@ require.config({
         "Dispatch": "../../game-modules/scripts/modules/Dispatch",
         "domReady": "../../game-modules/scripts/lib/domReady",
         "DOMElement": "../../game-modules/scripts/modules/DOMElement",
+        "easel": "../../game-modules/scripts/lib/easeljs/easeljs.0.8.0.min",
         "Events": "../../game-modules/scripts/modules/Events",
         "jquery": "../../game-modules/scripts/lib/jquery.min",
         "LevelSelect": "components/LevelSelect",
@@ -28,7 +38,8 @@ require.config({
         "TrayModule": "components/TrayModule",
         "TrayView": "../../game-modules/scripts/views/TrayView",
         "Tween": "../../game-modules/scripts/lib/tweenjs/tweenjs-0.6.0.min"
-    }
+    },
+    
 });
 
 require(["App", "domReady"], function (App, domReady) {
