@@ -4,9 +4,9 @@
         
         var TrayModule = {
             render: function (data) {
-                console.log("RENDERING TRAY");
+                //console.log("RENDERING TRAY");
                 var tray, trayConten, frag = document.createDocumentFragment();
-                console.log("TRAY DATA", data);
+                //console.log("TRAY DATA", data);
                 
                 tray = new DOMElement("DIV", "id", "tray", "main");
                 

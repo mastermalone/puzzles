@@ -42,15 +42,13 @@ require.config({
     
 });
 
-require(["App", "domReady", "Tween", "Easel"], function (App, domReady, Tween, Easel) {
+require(["App", "domReady", "Tween", "Easel"], function (App, domReady) {
     var api = App.setAPIURL('../../game-modules/json/game.json');//Temporary JSON work;
     //var api = App.setAPIURL('../game-modules/json/game.json');//Temporary JSON home;
     
     console.log("THE API URL", api.url);
-    console.log("EASEL", Easel);
     
     domReady(function () {
         App.init(api.url);
     });
-    
 });

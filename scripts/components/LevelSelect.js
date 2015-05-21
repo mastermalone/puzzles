@@ -1,5 +1,5 @@
 (function () {
-	 define(["CreateNode"], function (CreateNode) {
+	 define(["DOMElement"], function (DOMElement) {
 	     "use strict";
 
 	 	function LevelSelect () {
@@ -13,16 +13,6 @@
                     url: url
                 };  
 	 		},
-	 		placeContent: function (el, content) {
-	 			if(!el || el === ""){
-	 				console.log("LevelSelect Module: You did not pass in the ID of the target element");
-	 				return;
-	 			}
-	 			this.el = el;
-	 			var targetElm = document.getElementById(this.el);
-	 			targetElm.appendChild(content);
-	 			//return targetElm;
-	 		},
 	 		animateLevels: function (Bool) {
 	 			this.animate = Bool;
 	 			if(!this.animate){
@@ -32,26 +22,35 @@
 	 			console.log("Got passed the check for bool", this.animate);
 	 		},
 	 		render: function (data) {
-	 		    //console.log("RENDER CONTENT");
-	 			//console.log("Rendiering the content", data);
 	 			//Create elements for the level select view based on the data object returned
-	 			var jsonData = data, i, levels = data, length =  Object.keys(jsonData.puzzle).length/*Object.keys(data[Object.keys(data)]).length*/, holder = new CreateNode(), hld, selectBtn = new CreateNode(), sb, selector = new CreateNode(), slctr, frag = document.createDocumentFragment();
+	 			var jsonData = data, i, levels = data, length = Object.keys(jsonData.puzzle).length/*Object.keys(data[Object.keys(data)]).length*/, holder, selectBtn , sb, selector, slctr, frag = document.createDocumentFragment();
 	 			
-	 			console.log("VALUE OF FIRST CHILD", /*Object.keys(data[Object.keys(data)]).length,*/ jsonData.puzzle["level"+"2"].image, /*Object.keys(data[Object.keys(data)]),*/ Object.keys(jsonData.puzzle).length, jsonData.modal);
-	 			hld = holder.makeElement("DIV", "id", "level-select");
-	 			slctr = selector.makeElement("SPAN", "id", "selector", "1", true);
+	 			//console.log("VALUE OF FIRST CHILD", /*Object.keys(data[Object.keys(data)]).length,*/ jsonData.puzzle["level"+"2"].image, /*Object.keys(data[Object.keys(data)]),*/ Object.keys(jsonData.puzzle).length, jsonData.modal);
 	 			
-	 			for(i = 0; i < length; i++){
-	 			    //console.log("length of the object", levels["level"+(i+1)].image);
-	 			    //console.log("length of the object", levels["level"+(i+1)].completed);
-	 			    sb = selectBtn.makeElement("DIV", "id", "select-btn"+(i+1), (i+1+""));
-	 			    frag.appendChild(sb);
+	 		    holder = new DOMElement({
+                    type: ["DIV"],
+                    id: ["level-select"],
+                    parent: "main"
+                });
+	 			
+	 			slctr = new DOMElement({
+	 			    type: ["SPAN"],
+	 			    id: ["selector"],
+	 			    text: ["Level"],
+	 			    parent: "level-select"
+	 			});
+	 				 			
+	 			for (i = 0; i < length; i++){
+	 			    //Create Level Select Buttons
+	 			    sb = new DOMElement("DIV", "id", "select-btn"+(i+1), frag, (i+1+""));
 	 			}
-                frag.appendChild(slctr);
-	 			hld.appendChild(frag);
 	 			
-	 			this.placeContent("main", hld);
-	 			//return hld;
+	 			document.getElementById("level-select").appendChild(frag);
+	 			
+	 			jsonData = null;
+	 			holder = null;
+	 			selector = null;
+	 			sb = null;
 	 		}
 	 	};
 	 	
