@@ -3,7 +3,7 @@
 	     "use strict";
 
 	 	function LevelSelect () {
-	 		//Empty Constructor
+	 		this.levelSelectId = "";
 	 	}
 	 	 
 	 	LevelSelect.prototype = {
@@ -33,7 +33,7 @@
                         id: ["level-select"],
                         parent: "main"
                     });
-                    
+                    console.log("THE HOLDER:", holder.type.id.toString());
                     slctr = new DOMElement({
                         type: ["SPAN"],
                         id: ["selector"],
@@ -52,8 +52,6 @@
                     holder = null;
                     selector = null;
                     sb = null;
-	 			}else {
-	 			    console.log("its defined");
 	 			}	 		   
 	 		}
 	 	};
