@@ -28,7 +28,9 @@ require.config({
         "TrayModel": "../../game-modules/scripts/models/TrayModel",
         "TrayModule": "components/TrayModule",
         "TrayView": "../../game-modules/scripts/views/TrayView",
-        "Tween": "../../game-modules/scripts/lib/tweenjs/tweenjs-0.6.0.min"
+        //"Tween": "../../game-modules/scripts/lib/tweenjs/tweenjs-0.6.0.min"
+        "Tween": "../../game-modules/scripts/lib/createjs-tweenjs/lib/tweenjs-NEXT.combined",
+        "TweenCSS": "../../game-modules/scripts/lib/createjs-tweenjs/src/tweenjs/CSSPlugin"
     },
     shim: {
         "Easel": {
@@ -37,6 +39,10 @@ require.config({
         "tween": {
             deps: ["Easel"],
             exports: "Tween"
+        },
+        "tweenCSS": {
+            deps: ["tween"],
+            exports: "TweenCSS"
         }
     }
     
