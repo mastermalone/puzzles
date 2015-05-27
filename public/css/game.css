@@ -237,7 +237,10 @@ footer{
 	margin:0px 15px 0px 5px;
 	display:inline-block;
 }
-#level-select div#select-btn10{
+/*#level-select div#select-btn10{
+	padding:3px 4px;	
+}*/
+#level-select div.tens{
 	padding:3px 4px;	
 }
 
@@ -278,6 +281,9 @@ footer{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+#tray #level-indicator.tens{
+	padding:3px 4px;
 }
 #tray #tray-content{
 	height:500px;

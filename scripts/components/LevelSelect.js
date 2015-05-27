@@ -44,6 +44,9 @@
                     for (i = 0; i < length; i++){
                         //Create Level Select Buttons
                         sb = new DOMElement("DIV", "id", "select-btn"+(i+1), frag, (i+1+""));
+                        if (i >= 9) {
+                            frag.childNodes[i].className = "tens";
+                        }
                     }
                     
                     document.getElementById("level-select").appendChild(frag);

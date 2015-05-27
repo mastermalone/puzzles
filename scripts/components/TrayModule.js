@@ -1,21 +1,21 @@
 (function () {
-    define(["DOMElement", "Dispatch"], function (DOMElement, Dispatch) {
-        "use strict";
+    define(['DOMElement', 'Dispatch'], function (DOMElement, Dispatch) {
+        'use strict';
         
         var TrayModule = {
             render: function (data) {
-                //console.log("RENDERING TRAY");
+                //console.log('RENDERING TRAY');
                 var tray, trayConten, frag = document.createDocumentFragment();
-                //console.log("TRAY DATA", data);
+                //console.log('TRAY DATA', data);
                 
-                tray = new DOMElement("DIV", "id", "tray", "main");
+                tray = new DOMElement('DIV', 'id', 'tray', 'main');
                 
                 
                 trayConten = new DOMElement({
-                    type: ["DIV", "SPAN", "DIV"],
-                    id: ["level-selector", "level-indicator", "tray-content"],
-                    text: ["Level", "1", null],
-                    parent: "tray"
+                    type: ['DIV', 'SPAN', 'DIV'],
+                    id: ['level-selector', 'level-indicator', 'tray-content'],
+                    text: ['Level', '1', null],
+                    parent: 'tray'
                 });
             }
         };
