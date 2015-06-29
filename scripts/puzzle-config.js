@@ -19,6 +19,7 @@ require.config({
         'GameBoardModule':'components/GameBoardModule',
         'GameBoardView':'../../game-modules/scripts/views/GameBoardView',
         'jquery': '../../game-modules/scripts/lib/jquery.min',
+        'Jigsaw': '../../game-modules/scripts/modules/Jigsaw',
         'LevelSelect': 'components/LevelSelect',
         'LevelSelectView': '../../game-modules/scripts/views/LevelSelectView',
         'LevelSelectController': '../../game-modules/scripts/controllers/LevelSelectController',

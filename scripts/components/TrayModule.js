@@ -1,11 +1,11 @@
 (function () {
-    define(['DOMElement', 'Dispatch'], function (DOMElement, Dispatch) {
+    define(['DOMElement', 'Dispatch', 'Jigsaw'], function (DOMElement, Dispatch, Jigsaw) {
         'use strict';
         
         var TrayModule = {
             render: function (data) {
                 //console.log('RENDERING TRAY');
-                var tray, trayConten, frag = document.createDocumentFragment();
+                var tray, trayConten, jig, frag = document.createDocumentFragment();
                 //console.log('TRAY DATA', data);
                 
                 tray = new DOMElement('DIV', 'id', 'tray', 'main');
@@ -17,6 +17,9 @@
                     text: ['Level', '1', null],
                     parent: 'tray'
                 });
+                
+                jig = new Jigsaw(data);
+                jig.init(data);
             }
         };
         
