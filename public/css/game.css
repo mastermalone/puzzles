@@ -42,7 +42,6 @@ body{
 	text-decoration:none;
 }
 .main-wrap #main{
-	overflow: hidden;
 }
 footer{
 	margin:0px auto;
@@ -290,4 +289,10 @@ footer{
 }
 #image-view{
 	margin:30px;
+	border:solid 5px #ffc102;
+	box-shadow:5px 5px 3px #666;
+	-moz-box-shadow:5px 5px 3px #666;
+	-webkit-box-shadow:5px 5px 3px #666;
+	-o-box-shadow:5px 5px 3px #666;
+	
 }

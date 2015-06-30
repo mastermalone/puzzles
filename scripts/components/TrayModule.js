@@ -15,11 +15,12 @@
                     type: ['DIV', 'SPAN', 'DIV'],
                     id: ['level-selector', 'level-indicator', 'tray-content'],
                     text: ['Level', '1', null],
+                    dataAttr: ['lv-sel', 'lv-sel'],
                     parent: 'tray'
                 });
                 
                 jig = new Jigsaw(data);
-                jig.init(data);
+                jig.init();
             }
         };
         
