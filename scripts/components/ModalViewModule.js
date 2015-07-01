@@ -39,10 +39,7 @@
                     text: [jsonData.modal['cancelTxt'], jsonData.modal['confirmTxt']],
                     parent: 'modal-ctas'
                 });
-
-                /*for (i = 0; i < length; i++) {
-                    console.log('VALUE of i', i, 'Modal stuff:', jsonData.modal['header'], jsonData.puzzle['level'+(i+1)].image);
-                }*/
+                // JSON DATA REFERENCE jsonData.modal['header'], jsonData.puzzle['level'+(i+1)].image);
                 
                 lvlInd = document.getElementById('lv-inicator');
                 
@@ -53,7 +50,7 @@
                 
                 parseInt(lvl) > 9 ? lvlInd.className = 'lvl-ind tens' : 'lvl-ind';
                 
-                //Dispatch modalLoaded when the modal overlay is in the DOM. This is the event target referenced in the ModalController's addInteraction method.
+                //Dispatch modalLoaded when the modal overlay is in the DOM. This is the event referenced in the ModalController's addInteraction method.
                 dsp.customEvent('lvs-modalBG', 'modalLoaded');
                 
                 modal - null;
