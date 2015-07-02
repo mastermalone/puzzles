@@ -296,3 +296,9 @@ footer{
 	-o-box-shadow:5px 5px 3px #666;
 	
 }
+
+.jigsaw-piece{
+	position: absolute;
+	top:0px;
+	right:0px;
+}
