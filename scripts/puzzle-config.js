@@ -13,6 +13,7 @@ require.config({
         'domReady': '../../game-modules/scripts/lib/domReady',
         'DOMElement': '../../game-modules/scripts/modules/DOMElement',
         'Easel': '../../game-modules/scripts/lib/easeljs/easeljs-0.8.0.min',
+        'Emitter': '../../game-modules/scripts/modules/Emitter',
         'Events': '../../game-modules/scripts/modules/Events',
         'GameBoardController':'../../game-modules/scripts/controllers/GameBoardController',
         'GameBoardModel':'../../game-modules/scripts/models/GameBoardModel',
