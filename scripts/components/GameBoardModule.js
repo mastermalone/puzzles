@@ -18,7 +18,7 @@
                 dsp = new Dispatch();
                 
                 img.onload = function () {
-                    scaledHeight = img.height;
+                    scaledHeight = Math.ceil(img.height);
                     console.log('Value of image width:', img.width, 'Value of image height:', img.height);
                     
                     if (img.width > maxWidth) {

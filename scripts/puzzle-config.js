@@ -20,6 +20,7 @@ require.config({
         'GameBoardModule':'components/GameBoardModule',
         'GameBoardView':'../../game-modules/scripts/views/GameBoardView',
         'jquery': '../../game-modules/scripts/lib/jquery.min',
+        'jquery-ui': '../../game-modules/scripts/lib/jquery-ui/jquery-ui.min',
         'Jigsaw': '../../game-modules/scripts/modules/Jigsaw',
         'LevelSelect': 'components/LevelSelect',
         'LevelSelectView': '../../game-modules/scripts/views/LevelSelectView',
@@ -49,6 +50,10 @@ require.config({
         'tweenCSS': {
             deps: ['tween'],
             exports: 'TweenCSS'
+        },
+        'jquery-ui': {
+            deps: ['jquery'],
+            exports: 'jquery-ui'
         }
     }
     
