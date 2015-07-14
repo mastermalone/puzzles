@@ -302,4 +302,11 @@ footer{
 	/*top:0px;
 	right:0px;*/
 	cursor:pointer;
+	width:auto;
+}
+#tray .jigsaw-piece{
+	/*width:50%;*/	
+}
+.jigsaw-piece:hover{
+	width:auto;
 }

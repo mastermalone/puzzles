@@ -19,7 +19,7 @@
                     parent: 'tray'
                 });
                 
-                jig = new Jigsaw(data);
+                jig = new Jigsaw(data, 'tray-content');
                 jig.init();
             }
         };
