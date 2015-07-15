@@ -49,6 +49,7 @@ footer{
 }
 #lvs-modalBG{
 	position:absolute;
+	z-index:1000;
 	top:0px;
 	left:0px;
 	right:0px;
@@ -168,6 +169,7 @@ footer{
 	color:#fff;
 	overflow:hidden;
 	position:absolute;
+	z-index:999;
 	top:0px;
 	left:0px;
 	right:0px;
