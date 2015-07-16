@@ -13,29 +13,34 @@
                     dsp,
                     maxWidth = 700;
                 
-                img = new Image();
-                img.src = data.image;
-                dsp = new Dispatch();
-                
-                img.onload = function () {
-                    scaledHeight = Math.ceil(img.height);
-                    console.log('Value of image width:', img.width, 'Value of image height:', img.height);
+                if (!data.image) {
+                    console.log('No image path was found in the data object');
+                    return;
+                }else {
+                    img = new Image();
+                    img.src = data.image;
+                    dsp = new Dispatch();
                     
-                    if (img.width > maxWidth) {
-                        scaledHeight = (img.height / img.width) * maxWidth;
-                        console.log("scaled height:", scaledHeight);
-                    }else {
-                        maxWidth = img.width;
-                    }
-                    imgView = document.createElement('canvas');
-                    imgView.id = 'image-view';
-                    imgView.width = maxWidth;
-                    imgView.height = scaledHeight;
-                    ctx = imgView.getContext('2d');
-                    ctx.drawImage(img, 0, 0, maxWidth, scaledHeight);
-                    imageParent.appendChild(imgView);
-                    dsp.customEvent(imgView, 'imagesize', {width:maxWidth, height:scaledHeight});
-               };
+                    img.onload = function () {
+                        scaledHeight = Math.ceil(img.height);
+                        console.log('Value of image width:', img.width, 'Value of image height:', img.height);
+                        
+                        if (img.width > maxWidth) {
+                            scaledHeight = (img.height / img.width) * maxWidth;
+                            console.log("scaled height:", scaledHeight);
+                        }else {
+                            maxWidth = img.width;
+                        }
+                        imgView = document.createElement('canvas');
+                        imgView.id = 'image-view';
+                        imgView.width = maxWidth;
+                        imgView.height = scaledHeight;
+                        ctx = imgView.getContext('2d');
+                        ctx.drawImage(img, 0, 0, maxWidth, scaledHeight);
+                        imageParent.appendChild(imgView);
+                        dsp.customEvent(imgView, 'imagesize', {width:maxWidth, height:scaledHeight});
+                   };
+                }                
             }
         };
         

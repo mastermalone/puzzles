@@ -10,7 +10,6 @@
                 
                 tray = new DOMElement('DIV', 'id', 'tray', 'main');
                 
-                
                 trayConten = new DOMElement({
                     type: ['DIV', 'SPAN', 'DIV'],
                     id: ['level-selector', 'level-indicator', 'tray-content'],
