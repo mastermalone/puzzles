@@ -1,12 +1,12 @@
 (function () {
-    define(['DOMElement', 'Dispatch', 'Jigsaw'], function (DOMElement, Dispatch, Jigsaw) {
+    define(['DOMElement', 'Dispatch', 'Jigsaw', 'Scroller', 'Text!../../game-modules/public/css/jquery.fs.scroller.min.css'], function (DOMElement, Dispatch, Jigsaw, Scroller, CSS) {
         'use strict';
         
         var TrayModule = {
             render: function (data) {
                 //console.log('RENDERING TRAY');
                 var tray, trayConten, jig, frag = document.createDocumentFragment();
-                //console.log('TRAY DATA', data);
+                console.log('TRAY CSSS', CSS);
                 
                 tray = new DOMElement('DIV', 'id', 'tray', 'main');
                 

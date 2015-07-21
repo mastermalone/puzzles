@@ -8,6 +8,7 @@ require.config({
         'BaseModel': '../../game-modules/scripts/models/BaseModel',
         'BaseView': '../../game-modules/scripts/views/BaseView',
         'CreateNode': '../../game-modules/scripts/modules/CreateNode',
+        'CSS': '../../game-modules/scripts/lib/require-css/css.min',
         'CssTransitions': '../../game-modules/scripts/modules/CssTransitionEvents',
         'Dispatch': '../../game-modules/scripts/modules/Dispatch',
         'domReady': '../../game-modules/scripts/lib/domReady',
@@ -31,8 +32,10 @@ require.config({
         'ModalModel': '../../game-modules/scripts/models/ModalModel',
         'ModalView': '../../game-modules/scripts/views/ModalView',
         'ModalViewModule': 'components/ModalViewModule',
+        'Scroller': '../../game-modules/scripts/lib/jquery.fs.scroller.min',
         'Subclass': '../../game-modules/scripts/modules/Subclass',
-        'TrayController': '../../game-modules/scripts/controllers/TrayController',     
+        'TrayController': '../../game-modules/scripts/controllers/TrayController',
+        'Text': '../../game-modules/scripts/lib/requirejs-text/2.0.14/text',     
         'TrayModel': '../../game-modules/scripts/models/TrayModel',
         'TrayModule': 'components/TrayModule',
         'TrayView': '../../game-modules/scripts/views/TrayView',
@@ -56,6 +59,10 @@ require.config({
             deps: ['jquery'],
             exports: 'jquery-ui'
         },
+        'Scroller': {
+            deps: ['jquery'],
+            exports: 'Scroller'
+        },
         'eventemitter2': {
             exports: 'EventEmitter2'
         }
@@ -64,7 +71,7 @@ require.config({
 });
 
 require(['App', 'domReady', 'Tween'], function (App, domReady) {
-    var api = App.setAPIURL('../../game-modules/json/game.json');//Temporary JSON work;
+    var api = App.setAPIURL(encodeURI('../../game-modules/json/game.json'));//Temporary JSON work;
     //var api = App.setAPIURL('../game-modules/json/game.json');//Temporary JSON home;
     
     console.log('THE API URL', api.url);
