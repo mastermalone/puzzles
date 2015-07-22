@@ -1,5 +1,5 @@
 (function () {
-    define(['DOMElement', 'Dispatch', 'Jigsaw', 'Scroller', 'Text!../../game-modules/public/css/jquery.fs.scroller.min.css'], function (DOMElement, Dispatch, Jigsaw, Scroller, CSS) {
+    define(['DOMElement', 'Dispatch', 'Jigsaw', 'Scroller', 'CSS!../../game-modules/public/css/jquery.fs.scroller.min.css'], function (DOMElement, Dispatch, Jigsaw, Scroller, css) {
         'use strict';
         
         var TrayModule = {
@@ -17,9 +17,13 @@
                     dataAttr: ['lv-sel', 'lv-sel'],
                     parent: 'tray'
                 });
-                
-                jig = new Jigsaw(data, 'tray-content');
+                 
+                jig = new Jigsaw(data, '.scroller-content');
                 jig.init();
+                
+                $('#tray-content').scroller({
+                    
+                });
             }
         };
         
