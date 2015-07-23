@@ -1,5 +1,5 @@
 (function () {
-    define(['DOMElement', 'Dispatch', 'Jigsaw', 'Scroller', 'CSS!../../game-modules/public/css/jquery.fs.scroller.min.css'], function (DOMElement, Dispatch, Jigsaw, Scroller, css) {
+    define(['DOMElement', 'Dispatch', 'Jigsaw', 'Scroller', 'CSS!../../game-modules/public/css/jquery.fs.scroller.min.css', 'CSS!../../game-modules/public/css/jquery.fs.scroller.override.css'], function (DOMElement, Dispatch, Jigsaw, Scroller, css, cssOverride) {
         'use strict';
         
         var TrayModule = {
