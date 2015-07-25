@@ -71,12 +71,7 @@ require.config({
 });
 
 require(['App', 'domReady', 'Tween'], function (App, domReady) {
-    var api = App.setAPIURL(encodeURI('../../game-modules/json/game.json'));//Temporary JSON work;
-    //var api = App.setAPIURL('../game-modules/json/game.json');//Temporary JSON home;
-    
-    console.log('THE API URL', api.url);
-    
     domReady(function () {
-        App.init(api.url);
+        App.init(encodeURIComponent('../../game-modules/json/game.json'));
     });
 });

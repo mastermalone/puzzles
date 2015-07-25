@@ -5,7 +5,7 @@
         var TrayModule = {
             render: function (data) {
                 //console.log('RENDERING TRAY');
-                var tray, trayConten, jig, frag = document.createDocumentFragment();
+                var tray, trayConten;
                 console.log('TRAY CSSS', CSS);
                 
                 tray = new DOMElement('DIV', 'id', 'tray', 'main');
@@ -18,12 +18,22 @@
                     parent: 'tray'
                 });
                  
-                jig = new Jigsaw(data, '.scroller-content');
+                /*jig = new Jigsaw(data, '.scroller-content');
+                jig.init();
+                //this.update();*/
+                /*$('#tray-content').scroller({
+                    
+                });*/
+            },
+            update: function (data, level) {
+                var jig;
+                jig = new Jigsaw(data, '.scroller-content', level);
                 jig.init();
                 
-                $('#tray-content').scroller({
-                    
-                });
+                $('#tray-content').scroller({});
+                console.log("GETTING INTO UPDAT", data);
+                
+                jig = null;
             }
         };
         
