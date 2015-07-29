@@ -27,11 +27,14 @@
             },
             update: function (data, level) {
                 var jig;
+                
+                $('#tray-content').scroller({});
+                
                 jig = new Jigsaw(data, '.scroller-content', level);
                 jig.init();
                 
-                $('#tray-content').scroller({});
-                console.log("GETTING INTO UPDAT", data);
+                //$('#tray-content').scroller({});
+                console.log("GETTING INTO UPDATE", data);
                 
                 jig = null;
             }

@@ -1,45 +1,43 @@
 (function () {
     define(['Dispatch'], function (Dispatch) {
         var GameBoardModule = {
+            img: '',
+            imageView: '',
+            ctx: '',
+            imageParent: document.getElementById('main'),
+            zone: '',
+            scaledHeight: '',
+            dsp: '',
+            maxWidth: 700, 
             render: function (data) {
-                console.log('GAMEBOARD IS RENDERING');
                 
-                var img,
-                    imageView,
-                    ctx,
-                    imageParent = document.getElementById('main'),
-                    zone,
-                    scaledHeight,
-                    dsp,
-                    maxWidth = 700;
-                
-                if (!data.image) {
-                    console.log('No image path was found in the data object');
+                if (!data.image || typeof document.querySelector('#image-view') !== 'object') {
+                    console.log('No image path was found in the data object', typeof document.querySelector('#image-view'));
                     return;
                 }else {
-                    img = new Image();
-                    img.src = data.image;
-                    dsp = new Dispatch();
+                    this.img = new Image();
+                    this.img.src = data.image;
+                    this.dsp = new Dispatch();
                     
-                    img.onload = function () {
-                        scaledHeight = Math.ceil(img.height);
-                        console.log('Value of image width:', img.width, 'Value of image height:', img.height);
+                    this.img.onload = function () {
+                        this.scaledHeight = Math.ceil(this.img.height);
+                        console.log('Value of image width:', this.img.width, 'Value of image height:', this.img.height);
                         
-                        if (img.width > maxWidth) {
-                            scaledHeight = (img.height / img.width) * maxWidth;
-                            console.log("scaled height:", scaledHeight);
+                        if (this.img.width > this.maxWidth) {
+                            this.scaledHeight = (this.img.height / this.img.width) * this.maxWidth;
+                            console.log("scaled height:", this.scaledHeight);
                         }else {
-                            maxWidth = img.width;
+                            this.maxWidth = this.img.width;
                         }
-                        imgView = document.createElement('canvas');
-                        imgView.id = 'image-view';
-                        imgView.width = maxWidth;
-                        imgView.height = scaledHeight;
-                        ctx = imgView.getContext('2d');
-                        ctx.drawImage(img, 0, 0, maxWidth, scaledHeight);
-                        imageParent.appendChild(imgView);
-                        dsp.customEvent(imgView, 'imagesize', {width:maxWidth, height:scaledHeight});
-                   };
+                        this.imgView = document.createElement('canvas');
+                        this.imgView.id = 'image-view';
+                        this.imgView.width = this.maxWidth;
+                        this.imgView.height = this.scaledHeight;
+                        this.ctx = this.imgView.getContext('2d');
+                        this.ctx.drawImage(this.img, 0, 0, this.maxWidth, this.scaledHeight);
+                        this.imageParent.appendChild(this.imgView);
+                        this.dsp.customEvent(this.imgView, 'imageloaded', {width:this.maxWidth, height:this.scaledHeight});
+                   }.bind(this);
                 }                
             }
         };

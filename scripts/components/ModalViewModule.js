@@ -15,6 +15,7 @@
                 
                 /*DOMElement allows for easy creation of different types of dynamic elements 
                  * In the code below, I create the modal overlay and all of it's nested child nodes
+                 * This may be temporaray until I find suitable templating
                  */               
                 modal = new DOMElement({
                     type: ['DIV', 'DIV'],
@@ -42,11 +43,10 @@
                 // JSON DATA REFERENCE jsonData.modal['header'], jsonData.puzzle['level'+(i+1)].image);
                 
                 lvlInd = document.getElementById('lv-inicator');
-                
-                modal = document.getElementById('lvs-modalBG');
+                modal = document.querySelector('#lvs-modalBG');
                 modal.style.opacity = 0;
                 window.getComputedStyle(modal).opacity;
-                modal.className = 'fade-in';
+                //modal.className = 'fade-in';
                 
                 parseInt(lvl) > 9 ? lvlInd.className = 'lvl-ind tens' : 'lvl-ind';
                 
