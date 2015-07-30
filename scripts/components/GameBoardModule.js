@@ -21,11 +21,11 @@
                     
                     this.img.onload = function () {
                         this.scaledHeight = Math.ceil(this.img.height);
-                        console.log('Value of image width:', this.img.width, 'Value of image height:', this.img.height);
+                        //console.log('Value of image width:', this.img.width, 'Value of image height:', this.img.height);
                         
                         if (this.img.width > this.maxWidth) {
                             this.scaledHeight = (this.img.height / this.img.width) * this.maxWidth;
-                            console.log("scaled height:", this.scaledHeight);
+                            //console.log("scaled height:", this.scaledHeight);
                         }else {
                             this.maxWidth = this.img.width;
                         }
@@ -35,6 +35,13 @@
                         this.imgView.height = this.scaledHeight;
                         this.ctx = this.imgView.getContext('2d');
                         this.ctx.drawImage(this.img, 0, 0, this.maxWidth, this.scaledHeight);
+                        
+                        
+                        /*if (!document.querySelector('#image-view')) {
+                            this.imageParent.appendChild(this.imgView);
+                        }*/
+                        //this.imageView = document.querySelector('#image-view');
+                        console.log('TYPE OF GAMEBOARD', !document.querySelector('#image-view'));
                         this.imageParent.appendChild(this.imgView);
                         this.dsp.customEvent(this.imgView, 'imageloaded', {width:this.maxWidth, height:this.scaledHeight});
                    }.bind(this);

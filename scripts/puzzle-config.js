@@ -70,7 +70,7 @@ require.config({
     
 });
 
-require(['App', 'domReady', 'Tween'], function (App, domReady) {
+require(['App', 'domReady'], function (App, domReady) {
     domReady(function () {
         App.init(encodeURIComponent('../../game-modules/json/game.json'));
     });
