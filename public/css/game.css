@@ -6,6 +6,10 @@ body{
 	-moz-user-select:none;
 	-ms-user-select:none;
 }
+canvas {
+	margin:0px;
+	padding:0px;
+}
 .main-wrap{
 	margin: 30px auto;
 	width:960px;
@@ -296,19 +300,26 @@ footer{
 	-moz-box-shadow:5px 5px 3px #666;
 	-webkit-box-shadow:5px 5px 3px #666;
 	-o-box-shadow:5px 5px 3px #666;
-	
 }
 
 .jigsaw-piece{
 	position: absolute;
-	/*top:0px;
-	right:0px;*/
 	cursor:pointer;
-	width:auto;
 }
 #tray .jigsaw-piece{
-	/*width:50%;*/	
+	transition: all .2s ease-in-out;
+	display:block;
+	position: relative;
+	width:90%;	
+	margin:0px auto 10px;
+	text-align:center;
+	vertical-align: middle;
 }
+
 .jigsaw-piece:hover{
+	transform: scale(1.1);
 	width:auto;
+}
+#main>.jigsaw-piece:hover{
+	transform: none;
 }
