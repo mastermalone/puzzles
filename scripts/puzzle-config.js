@@ -16,6 +16,7 @@ require.config({
         'Easel': '../../game-modules/scripts/lib/easeljs/easeljs-0.8.0.min',
         'EventEmitter2': '../../game-modules/scripts/lib/eventemitter2',
         'Emitter': '../../game-modules/scripts/modules/Emitter',
+        'EventList': '../../game-modules/scripts/modules/EventList',
         'Events': '../../game-modules/scripts/modules/Events',
         'GameBoardController':'../../game-modules/scripts/controllers/GameBoardController',
         'GameBoardModel':'../../game-modules/scripts/models/GameBoardModel',
