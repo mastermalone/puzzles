@@ -1,5 +1,5 @@
 (function () {
-    define(['Dispatch'], function (Dispatch) {
+    define(['Emitter'], function (emitter) {
         var GameBoardModule = {
             img: '',
             imageView: '',
@@ -7,8 +7,7 @@
             imageParent: document.getElementById('main'),
             zone: '',
             scaledHeight: '',
-            dsp: '',
-            maxWidth: 700, 
+            maxWidth: 700,
             render: function (data) {
                 
                 if (!data.image || typeof document.querySelector('#image-view') !== 'object') {
@@ -17,9 +16,10 @@
                 }else {
                     this.img = new Image();
                     this.img.src = data.image;
-                    this.dsp = new Dispatch();
-                    
+
                     this.img.onload = function () {
+                        var imageData;
+
                         this.scaledHeight = Math.ceil(this.img.height);
                         //console.log('Value of image width:', this.img.width, 'Value of image height:', this.img.height);
                         
@@ -43,7 +43,12 @@
                         //this.imageView = document.querySelector('#image-view');
                         console.log('TYPE OF GAMEBOARD', !document.querySelector('#image-view'));
                         this.imageParent.appendChild(this.imgView);
-                        this.dsp.customEvent(this.imgView, 'imageloaded', {width:this.maxWidth, height:this.scaledHeight});
+
+                        imageData = {
+                            width: this.maxWidth,
+                            height: this.scaledHeight
+                        };
+                        emitter.emit('imageloaded', imageData);
                    }.bind(this);
                 }                
             }

@@ -1,8 +1,7 @@
 (function () {
-    define(['DOMElement', 'Dispatch'], function (DOMElement, Dispatch) {
+    define(['DOMElement', 'Emitter'], function (DOMElement, emitter) {
         'use strict';
-        var dsp = new Dispatch(), 
-        modal,
+        var modal,
         ModalViewModule = {
             render: function (data, lvl) {
                 var jsonData = data, 
@@ -51,7 +50,7 @@
                 parseInt(lvl) > 9 ? lvlInd.className = 'lvl-ind tens' : 'lvl-ind';
                 
                 //Dispatch modalLoaded when the modal overlay is in the DOM. This is the event referenced in the ModalController's addInteraction method.
-                dsp.customEvent('lvs-modalBG', 'modalLoaded');
+                emitter.emit('modalLoaded', { modalId: 'lvs-modalBG' });
                 
                 modal - null;
                 modalContent = null;
