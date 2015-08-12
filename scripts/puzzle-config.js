@@ -1,5 +1,5 @@
 require.config({
-    urlArgs: 'bust=' +  (new Date()).getTime(),//Remove before deployment
+    //urlArgs: 'bust=' +  (new Date()).getTime(),//Remove before deployment
     baseUrl:'scripts/',
     paths: {
         'App': '../../game-modules/scripts/app',
@@ -10,6 +10,7 @@ require.config({
         'CreateNode': '../../game-modules/scripts/modules/CreateNode',
         'CSS': '../../game-modules/scripts/lib/require-css/css.min',
         'CssTransitions': '../../game-modules/scripts/modules/CssTransitionEvents',
+        'Curve': '../../game-modules/scripts/modules/Curve',
         'Dispatch': '../../game-modules/scripts/modules/Dispatch',
         'domReady': '../../game-modules/scripts/lib/domReady',
         'DOMElement': '../../game-modules/scripts/modules/DOMElement',
@@ -25,6 +26,7 @@ require.config({
         'jquery': '../../game-modules/scripts/lib/jquery.min',
         'jquery-ui': '../../game-modules/scripts/lib/jquery-ui/jquery-ui.min',
         'Jigsaw': '../../game-modules/scripts/modules/Jigsaw',
+        'PuzzlePieceFactory': '../../game-modules/scripts/modules/PuzzlePieceFactory',
         'LevelSelect': 'components/LevelSelect',
         'LevelSelectView': '../../game-modules/scripts/views/LevelSelectView',
         'LevelSelectController': '../../game-modules/scripts/controllers/LevelSelectController',
